@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+{%block child_block%}
+<div align="center" class="mb-3">
+    <form class="mb-3 mt-3" method="post" action="/login_validation">
+      <input type="text" id="email" class="fadeIn second" name="email" placeholder="email"><br><br>
+      <input type="text" id="password" class="fadeIn third" name="password" placeholder="password"><br><br>
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+</div>
+{%endblock%}

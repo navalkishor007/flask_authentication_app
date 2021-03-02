@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+{%block child_block%}
+<div align="center" class="mb-3">
+    <h1>Registerd Users</h1>
+    <table class="table table-hover table-dark mt-3">
+        <thead>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>password</td>
+            <td>Operations</td>
+        </thead>
+        {%for data in data%}
+        <tr>
+            <td>{{data[0]}}</td>
+            <td>{{data[1]}}</td>
+            <td>{{data[2]}}</td>
+            <td>{{data[3]}}</td>
+            <td><a href="/delete/{{data[0]}}"><button class="btn btn-primary" id='test'>Delete</button></a></td>
+        </tr>
+        {%endfor%}
+    </table>
+</div>
+{%endblock%}
